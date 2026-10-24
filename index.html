@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>InstaService Inc | Same-Day Home Services Across the U.S.</title>
+<meta name="description" content="Book trusted same-day home services in 60 seconds or less. Upfront pricing from $30, warranty-backed service, verified local experts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1220;--ink2:#18233a;--mut:#5b6678;--org:#f97316;--red:#ea580c;--cream:#fff4e8;--line:#e6eaf0;--bg:#f6f8fb;--grn:#059669;--r:18px;--sh:0 1px 2px rgba(11,18,32,.04),0 8px 24px rgba(11,18,32,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+body{font-family:Roboto,system-ui,sans-serif;font-size:15px;color:var(--ink);background:#fff;line-height:1.55;padding-bottom:84px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+svg{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.mono{font-family:"Roboto Mono",monospace}
+:focus-visible{outline:3px solid #fdba74;outline-offset:2px}
+.top{background:var(--ink);color:#e2e8f0;display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 16px;font-size:13px}
+.top b{background:#e04a0b;color:#fff;border-radius:6px;padding:3px 9px;font-size:11px;letter-spacing:.06em;display:flex;gap:5px;align-items:center;white-space:nowrap}
+.top span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:10px;padding:10px 20px;max-width:1120px;margin:0 auto}
+.logo{width:44px;height:44px;border-radius:50%;border:2px solid #3b82f6;display:grid;place-items:center;background:#fff;flex:none}
+.logo svg{width:24px;height:24px;fill:var(--ink);stroke:none}
+.brand{flex:1;min-width:0;line-height:1.25}
+.brand h4{font-size:16px;font-weight:700;display:flex;align-items:center;gap:6px}
+.tag{font-size:11px;font-weight:500;background:#eef2f7;color:var(--mut);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+.tick{color:#2563eb;width:16px;height:16px}
+.brand small{font-size:12px;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;font-weight:700;font-size:14px;padding:11px 18px;border:0;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-call{background:#fff;border:1px solid #d5dce6;color:var(--ink)}
+.btn-call:hover{background:#f3f6fa}
+.btn-call svg{color:var(--red)}
+.btn-org{background:linear-gradient(135deg,#ff6a00,#ff9a1f);color:#fff;box-shadow:0 6px 16px rgba(249,115,22,.28)}
+.btn-org:hover{box-shadow:0 8px 22px rgba(249,115,22,.4);transform:translateY(-1px)}
+.btn-dark{background:var(--ink);color:#fff;width:100%;padding:14px}
+.btn-dark:hover{background:#1c2a47}
+.hd .btn-org{font-size:12px;line-height:1.2;padding:9px 14px;text-align:center}
+
+.hero{position:relative;background:radial-gradient(900px 400px at 85% -10%,#ffe3c7 0%,transparent 60%),linear-gradient(180deg,#fff7ee,#fff);padding:40px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:32px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #fbd9ae;color:#9a3412;font-weight:500;border-radius:999px;padding:7px 14px;font-size:13px;box-shadow:var(--sh)}
+.pill i{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+.hero h1{font-size:clamp(30px,6vw,50px);font-weight:900;margin:20px 0 16px;max-width:620px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#f97316,#fb8c00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:16px;color:var(--mut);line-height:1.65;max-width:520px}
+.hero p.lead b{color:var(--ink)}
+.feats{display:grid;gap:10px;margin-top:28px;max-width:520px}
+.feat{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--sh)}
+.ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;flex:none}
+.ic.g{background:#d1fae5;color:#047857}.ic.o{background:#ffedd5;color:var(--red)}.ic.b{background:#dbeafe;color:#2563eb}
+.feat h3{font-size:15px;font-weight:700;letter-spacing:0}
+.feat p{color:var(--mut);font-size:13.5px}
+
+.camp{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:16px;box-shadow:var(--sh)}
+.camp .th{width:52px;height:52px;border-radius:12px;border:1px solid var(--line);flex:none;display:grid;place-items:center;background:#f6f8fb}
+.camp .th .logo{width:36px;height:36px}.camp .th .logo svg{width:20px;height:20px}
+.camp h4{font-size:14.5px}
+.camp p{color:var(--mut);font-size:12.5px;line-height:1.4}
+.camp .st{margin-left:auto;background:var(--cream);border:1px solid #fbd9ae;color:var(--red);font-weight:700;font-size:12.5px;border-radius:9px;padding:6px 10px;white-space:nowrap}
+.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 2px 4px rgba(11,18,32,.04),0 24px 56px rgba(11,18,32,.14);border:1px solid var(--line)}
+.card-h{background:linear-gradient(120deg,#ff6a00,#ff9a1f 55%,#f45a0a);color:#fff;padding:24px 24px 26px}
+.card-h .r{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;font-size:12.5px}
+.card-h .chip{background:rgba(120,50,0,.35);border-radius:999px;padding:6px 12px;font-weight:700;font-size:11.5px;letter-spacing:.06em;display:flex;gap:6px;align-items:center}
+.card-h .t{font-weight:500;display:flex;gap:6px;align-items:center}
+.card-h h2{font-size:26px;font-weight:900;margin-bottom:6px}
+.card-h p{font-size:14px;opacity:.95}
+form{padding:22px 24px 24px}
+label{display:block;font-weight:700;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:#334155;margin:18px 0 7px}
+label:first-child{margin-top:0}
+label span{color:#f43f5e}
+input,select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #d5dce6;border-radius:12px;background:#fbfcfe;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+select{font-weight:500;font-size:15px;appearance:none;padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+input::placeholder{color:#9aa5b6}
+input:focus,select:focus{outline:0;border-color:var(--org);box-shadow:0 0 0 4px rgba(249,115,22,.15);background:#fff}
+.rate{display:flex;justify-content:space-between;align-items:center;background:var(--cream);border:1px solid #fbd9ae;border-radius:12px;padding:11px 14px;margin-top:12px;font-weight:500;font-size:14px;color:#7c2d12}
+.rate b{font-size:20px;color:var(--red);font-weight:900}
+.hint{color:var(--mut);font-size:12.5px;margin-top:6px}
+.when{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.when button{background:#fbfcfe;border:1px solid #d5dce6;border-radius:12px;padding:12px 6px;font:inherit;font-size:13px;font-weight:500;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;gap:4px;align-items:center;line-height:1.2;transition:all .15s}
+.when button:hover{border-color:#fdba74}
+.when button.on{background:#ff6a00;border-color:#ea580c;color:#fff;box-shadow:0 6px 14px rgba(249,115,22,.3)}
+.when span{font-size:18px}
+.sub{width:100%;margin-top:24px;padding:16px;font-size:16px;border-radius:14px;background:linear-gradient(135deg,#ff6a00,#f45a0a);color:#fff;box-shadow:0 10px 24px rgba(244,90,10,.32)}
+.sub:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(244,90,10,.4)}
+.trust{border-top:1px solid var(--line);margin-top:20px;padding-top:16px;text-align:center;font-weight:500;font-size:13px}
+.trust div{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.trust .y{color:var(--grn);font-weight:700}.trust .z{color:var(--red)}
+.trust a{text-decoration:underline;font-size:13px}
+.ok{display:none;margin-top:16px;background:#d1fae5;color:#065f46;border-radius:12px;padding:12px;font-weight:500;font-size:14px;text-align:center}
+
+section{padding:64px 0}
+.c{text-align:center}
+.eb{display:inline-flex;align-items:center;background:var(--cream);border:1px solid #fbd9ae;color:#9a3412;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:7px 16px;font-size:11.5px}
+.eb.blue{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.sec h2{font-size:clamp(26px,4.4vw,38px);font-weight:900;margin:16px 0 12px}
+.sec p.sub2{font-size:16px;color:var(--mut);max-width:560px;margin:0 auto;line-height:1.65}
+.prom{display:grid;gap:16px;margin-top:40px;text-align:left}
+.pr{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--sh)}
+.pr .ic{width:48px;height:48px;background:var(--cream);color:var(--red);font-size:24px;border:1px solid #fbd9ae;border-radius:14px}
+.pr small{display:block;color:var(--red);font-weight:700;letter-spacing:.08em;font-size:11.5px;margin:22px 0 6px;text-transform:uppercase}
+.pr h3{font-size:22px;font-weight:900;margin-bottom:14px}
+.pr blockquote{background:var(--cream);border:1px solid #fbd9ae;border-radius:12px;padding:12px 14px;color:var(--red);font-weight:500;font-size:14.5px;line-height:1.45;margin-bottom:14px}
+.pr p{color:var(--mut);font-size:14.5px;line-height:1.65}
+.pr ul{list-style:none;border-top:1px solid var(--line);margin-top:18px;padding-top:16px;display:grid;gap:9px}
+.pr li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:500;color:#1e293b}
+.pr li svg,.pc li svg{color:var(--grn);font-size:18px}
+.explore{margin-top:36px;display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #fbd9ae;color:var(--red);font-weight:700;font-size:14px;border-radius:999px;padding:12px 26px;box-shadow:var(--sh);transition:transform .15s}
+.explore:hover{transform:translateY(-2px)}
+.rates{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pgrid{display:grid;gap:16px;margin-top:40px;text-align:left}
+.pc{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.pc:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(11,18,32,.1)}
+.pc .in{padding:22px 22px 18px;flex:1}
+.pc .t{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.cat{background:#eef2f7;color:#475569;font-weight:700;letter-spacing:.07em;border-radius:8px;padding:5px 11px;font-size:11px;text-transform:uppercase}
+.mr{background:#ffedd5;color:var(--red);font-weight:700;border-radius:999px;padding:5px 11px;font-size:11.5px;display:flex;gap:5px;align-items:center}
+.pc h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.pc .d{color:var(--mut);font-size:14px;line-height:1.55}
+.amt{background:linear-gradient(180deg,#fff8f1,#fff3e6);border:1px solid #fbd9ae;border-radius:16px;padding:16px 18px;margin:18px 0 16px;font-size:13px;color:#7c2d12}
+.amt .n{font-size:38px;font-weight:900;color:var(--org);letter-spacing:-.03em;line-height:1.1;margin:2px 0 8px}
+.amt .n small{font-size:13px;color:var(--ink);font-weight:500;letter-spacing:0;margin-left:6px}
+.amt .e{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:500;color:#431407}
+.amt .e svg{color:var(--red);font-size:16px}
+.pc ul{list-style:none;display:grid;gap:8px;font-size:13.5px;color:var(--mut)}
+.pc li{display:flex;gap:10px;align-items:center}
+.pc .ft{padding:0 22px 22px}
+.guar{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:32px;box-shadow:var(--sh);text-align:left}
+.guar .ic{width:64px;height:64px;background:#d1fae5;color:#047857;font-size:32px;border-radius:18px}
+.guar h3{font-size:19px;font-weight:900;margin-bottom:6px}
+.guar p{color:var(--mut);font-size:14px;line-height:1.55;margin-bottom:14px}
+.claim{display:inline-block;background:var(--cream);border:1px solid #fbd9ae;color:var(--red);font-weight:700;font-size:13.5px;border-radius:999px;padding:9px 20px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:40px 0}
+.stats .st{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:22px 12px;text-align:center}
+.stats .ic{width:46px;height:46px;margin:0 auto 12px;font-size:22px;border-radius:13px}
+.stats .ic.y{background:#fef3c7;color:#f59e0b}.stats .ic.y svg{fill:#f59e0b}
+.stats b{display:block;font-family:"Roboto Mono",monospace;font-size:26px;line-height:1.2}
+.stats h4{font-size:14px;margin:6px 0 2px}
+.stats p{font-size:12.5px;color:var(--mut);line-height:1.4}
+.rv{display:grid;gap:14px}
+.rc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;text-align:left;box-shadow:var(--sh)}
+.stars{display:flex;gap:3px;align-items:center;color:var(--mut);font-size:12.5px}
+.stars svg{fill:#f59e0b;stroke:#f59e0b;font-size:16px}
+.rc q{display:block;font-size:14.5px;color:#334155;line-height:1.65;margin:12px 0 18px;quotes:"C" "D"}
+.rc .who{border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.rc .who b{font-size:14.5px;display:block}
+.rc .who span{font-size:13px;color:var(--mut)}
+.rc .who i{font-style:normal;background:var(--cream);color:var(--red);font-weight:500;border-radius:9px;padding:6px 10px;font-size:12px;text-align:center}
+.proc{background:linear-gradient(160deg,#18233a,#0b1220);color:#fff;border-radius:28px;padding:36px 22px;margin-top:56px;text-align:left}
+.proc small{color:#fb923c;font-weight:700;letter-spacing:.14em;font-size:11.5px}
+.proc h2{font-size:clamp(24px,4vw,34px);font-weight:900;margin:10px 0 26px}
+.steps{display:grid;gap:12px}
+.stp{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px}
+.stp .no{width:36px;height:36px;border-radius:50%;background:var(--org);display:grid;place-items:center;font-size:15px;font-weight:700;margin-bottom:14px}
+.stp h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.stp p{font-size:14px;color:#b6c2d4;line-height:1.6}
+.promo{background:linear-gradient(135deg,#0b1220,#3a2320);color:#fff;border-radius:28px;padding:40px 22px;margin-top:48px;text-align:left;box-shadow:0 24px 56px rgba(11,18,32,.25)}
+.promo .chip{display:inline-flex;gap:8px;align-items:center;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.45);color:#ffb24d;font-weight:700;letter-spacing:.07em;font-size:11px;border-radius:999px;padding:8px 16px;text-transform:uppercase}
+.promo h2{font-size:clamp(26px,4.4vw,38px);font-weight:900;margin:20px 0 14px;line-height:1.2}
+.promo h2 em{font-style:normal;color:var(--org)}
+.promo p{font-size:15px;color:#cbd5e1;line-height:1.7;margin-bottom:26px;max-width:560px}
+.lock{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:28px 20px;text-align:center}
+.lock small{color:#94a3b8;letter-spacing:.14em;font-weight:500;font-size:11.5px}
+.lock h3{font-size:26px;font-weight:900;margin:8px 0 8px}
+.lock p{font-size:14px;color:#cbd5e1;margin:0 auto 20px;line-height:1.5}
+.lock .btn{font-size:15px;padding:14px 28px;border-radius:14px}
+.lock .ph{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:18px;font-size:14px;color:#e2e8f0}
+.lock .ph svg{color:var(--org)}
+.final{background:radial-gradient(rgba(255,255,255,.14) 1.5px,transparent 1.5px) 0 0/28px 28px,linear-gradient(160deg,#f45a0a,#ff7a00);color:#fff;padding:64px 0;text-align:center}
+.final .chip{display:inline-flex;gap:8px;align-items:center;background:rgba(130,45,0,.45);border-radius:999px;padding:8px 16px;font-weight:700;letter-spacing:.07em;font-size:11px;text-transform:uppercase}
+.final h2{font-size:clamp(26px,5vw,40px);font-weight:900;margin:20px auto 12px;max-width:640px}
+.final p{font-size:15.5px;max-width:480px;margin:0 auto 26px;opacity:.95}
+.final .btn{background:#fff;color:var(--red);font-size:15.5px;padding:15px 30px;border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+footer{background:var(--ink);color:#94a3b8;text-align:center;padding:26px 20px;font-size:13px}
+footer b{color:#fff}
+.bar{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:8px;display:flex;gap:8px;box-shadow:0 12px 36px rgba(11,18,32,.2);max-width:520px;margin:0 auto}
+.bar .btn{padding:13px 16px;font-size:14.5px}
+.bar .btn-call{flex:0 0 30%}.bar .btn-org{flex:1}
+@media(min-width:860px){
+ .hero{padding:64px 0 80px}
+ .hero-grid{grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+ #quote{position:sticky;top:96px}
+ .prom,.rv,.steps{grid-template-columns:repeat(3,1fr)}
+ .pgrid{grid-template-columns:repeat(3,1fr)}
+ .stats{grid-template-columns:repeat(4,1fr)}
+ .proc,.promo{padding:48px}
+ .lock{max-width:520px}
+}
+@media(max-width:560px){
+ .hd .btn-call span{display:none}.hd .btn-call{padding:10px 12px}
+ .camp{flex-wrap:wrap}.camp .st{margin-left:0}
+ .guar{flex-direction:column;align-items:flex-start}
+ section{padding:48px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- Inline icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+ <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z" fill="currentColor"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></symbol>
+ <symbol id="i-tick" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+ <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.2" fill="currentColor"/></symbol>
+ <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+ <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+ <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8L9 8.3z"/></symbol>
+ <symbol id="i-thumb" viewBox="0 0 24 24"><path d="M7 11v10H3V11zM7 11l4-8a2.5 2.5 0 0 1 2.5 3L13 9h6a2 2 0 0 1 2 2.3l-1.2 7A2 2 0 0 1 18 20H7"/></symbol>
+ <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></symbol>
+</svg>
+
+<div class="top"><b><svg><use href="#i-clock"/></svg>SAME-DAY</b><span>Same-day technician dispatch across the U.S. Book online in under 60 seconds.</span></div>
+
+<header>
+ <div class="hd">
+  <div class="logo"><svg viewBox="0 0 24 24"><path d="M12 1.5 14 6l-1.5 1.5V10H18V7l3 3v2.5h-3V15l3 3v1.5l-3-1.5v-1.5h-5.5V19L11 21l-1.5-2v-2.5H4V18l-3 1.5V18l3-3v-2.5H1V10l3-3v3h5.5V7.5L8 6z"/></svg></div>
+  <div class="brand"><h4>InstaService <span class="tag">Inc</span><svg class="tick"><use href="#i-tick"/></svg></h4><small>Same-Day Home Services</small></div>
+  <a class="btn btn-call" href="tel:+18005550199"><svg><use href="#i-phone"/></svg><span class="mono">Call</span></a>
+  <a class="btn btn-org" href="#quote">Book<br>in 60s</a>
+ </div>
+</header>
+
+<main>
+<!-- HERO + FORM -->
+<div class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="pill"><i></i><svg style="color:var(--red);font-size:22px"><use href="#i-pin"/></svg>Available Across the U.S. &bull; Same-Day Dispatch</span>
+   <h1>Book Trusted <em>Same-Day Home Services</em> in 60 Seconds or Less.</h1>
+   <p class="lead">From house cleaning to plumbing fixes and fixture installations. Enjoy <b>upfront pricing from $30</b>, warranty-backed service, and verified local experts ready today.</p>
+   <div class="feats">
+    <div class="feat"><div class="ic g"><svg><use href="#i-shield"/></svg></div><div><h3>Warranty-Backed Service</h3><p>Service experts guarantee satisfaction.</p></div></div>
+    <div class="feat"><div class="ic o"><svg><use href="#i-bolt"/></svg></div><div><h3>Zero Hidden Charges</h3><p>What you see is what you pay.</p></div></div>
+    <div class="feat"><div class="ic b"><svg><use href="#i-clock"/></svg></div><div><h3>60-Second Booking</h3><p>Quick dispatch, live tracking end-to-end.</p></div></div>
+   </div>
+  </div>
+
+  <div id="quote">
+   <div class="camp">
+    <div class="th"><div class="logo"><svg viewBox="0 0 24 24"><path d="M12 1.5 14 6l-1.5 1.5V10H18V7l3 3v2.5h-3V15l3 3v1.5l-3-1.5v-1.5h-5.5V19L11 21l-1.5-2v-2.5H4V18l-3 1.5V18l3-3v-2.5H1V10l3-3v3h5.5V7.5L8 6z"/></svg></div></div>
+    <div><h4>InstaService Inc</h4><p>Official Facebook verified campaign &bull; Same-day booking</p></div>
+    <span class="st">Starts at $30</span>
+   </div>
+   <div class="card">
+    <div class="card-h">
+     <div class="r"><span class="chip"><svg><use href="#i-bolt"/></svg>INSTANT DISPATCH</span><span class="t"><svg><use href="#i-clock"/></svg>Book in under 60 sec</span></div>
+     <h2>Get Your Upfront Quote in 60s</h2>
+     <p>Lock in your same-day technician with zero hidden charges.</p>
+    </div>
+    <form id="qf" novalidate>
+     <label for="svc">Select service needed</label>
+     <select id="svc">
+      <option value="90" data-t="House Cleaning">House Cleaning — Starting from $90 (2 hrs)</option>
+      <option value="30" data-t="Toilet Cleaning">Toilet Cleaning — Starting from $30 (30 mins)</option>
+      <option value="70" data-t="Sink Fix">Sink Fix — Starting from $70 (45 mins)</option>
+      <option value="40" data-t="Toilet Leak Repair">Toilet Leak Repair — Starting from $40</option>
+      <option value="53" data-t="Window Blinds Installation">Window Blinds Installation — From $53/hr</option>
+      <option value="56" data-t="Holiday Lights Installation">Holiday Lights Installation — From $56/hr</option>
+     </select>
+     <div class="rate"><span style="display:flex;gap:10px;align-items:center"><svg style="color:var(--red)"><use href="#i-spark"/></svg>Upfront Starting Rate:</span><b id="rate">$90</b></div>
+     <label for="nm">Full name <span>*</span></label>
+     <input id="nm" type="text" placeholder="e.g. Michael Jordan" autocomplete="name" required>
+     <label for="ph">Phone number <span>*</span></label>
+     <input id="ph" type="tel" placeholder="(555) 000-0000" autocomplete="tel" required>
+     <p class="hint">Technician coordinator texts or calls in &lt; 5 minutes.</p>
+     <label for="em">Email address <span>*</span></label>
+     <input id="em" type="email" placeholder="you@example.com" autocomplete="email" required>
+     <label>When do you need this?</label>
+     <div class="when" id="when">
+      <button type="button" class="on"><span>⚡</span>Today (Same-Day)</button>
+      <button type="button"><span>📅</span>Tomorrow</button>
+      <button type="button"><span>🕒</span>Flexible</button>
+     </div>
+     <button class="btn sub" type="submit">Get Same-Day Service Quote <svg><use href="#i-arrow"/></svg></button>
+     <div class="ok" id="ok" role="status">Thanks! A technician coordinator will text or call you within 5 minutes.</div>
+     <div class="trust">
+      <div><span class="y"><svg style="vertical-align:-2px"><use href="#i-shield"/></svg> Warranty-Backed</span><span>&bull;</span><span><svg class="z" style="vertical-align:-2px"><use href="#i-check"/></svg> Zero Hidden Fees</span></div>
+      <span style="display:inline-flex;gap:10px;align-items:center"><svg style="color:var(--red)"><use href="#i-phone"/></svg>Prefer to call now? <a class="mono" href="tel:+18005550199">(800)&nbsp;555-0199</a></span>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- WHY -->
+<section class="sec c"><div class="wrap">
+ <span class="eb">Why InstaService</span>
+ <h2>Reliable Service, at Your Fingertips</h2>
+ <p class="sub2">InstaService prioritizes your satisfaction first while delivering exceptional home services across the U.S.</p>
+ <div class="prom">
+  <div class="pr"><div class="ic"><svg><use href="#i-shield"/></svg></div><small>Promise 01</small><h3>Quality Assurance</h3><blockquote>“Warranty-backed service through service experts”</blockquote><p>Every job is backed by our full service warranty. If anything isn’t completed to standard, we send an expert back to make it right immediately.</p><ul><li><svg><use href="#i-check"/></svg>Technicians verified &amp; background-checked</li><li><svg><use href="#i-check"/></svg>Workmanship backed by full warranty</li></ul></div>
+  <div class="pr"><div class="ic"><svg><use href="#i-tag"/></svg></div><small>Promise 02</small><h3>Transparent Prices</h3><blockquote>“There are no hidden charges, what you see is what you pay”</blockquote><p>Clear upfront rates from $30. Zero surprise travel charges, zero registration fees, and zero hidden platform markups.</p><ul><li><svg><use href="#i-check"/></svg>Upfront starting prices on every task</li><li><svg><use href="#i-check"/></svg>Zero platform, subscription, or quote fees</li></ul></div>
+  <div class="pr"><div class="ic"><svg><use href="#i-compass"/></svg></div><small>Promise 03</small><h3>Hassle-Free &amp; Fast</h3><blockquote>“Enjoy the ease of booking and tracking your service, end-to-end”</blockquote><p>Book verified local professionals in under 60 seconds with same-day dispatch and live status updates directly to your phone.</p><ul><li><svg><use href="#i-check"/></svg>Book online in under 60 seconds</li><li><svg><use href="#i-check"/></svg>Real-time status updates to your mobile</li></ul></div>
+ </div>
+ <a class="explore" href="#rates">Explore All Upfront Rates Below ↓</a>
+</div></section>
+
+<!-- RATES -->
+<section class="sec c rates" id="rates"><div class="wrap">
+ <span class="eb"><svg style="vertical-align:-3px;margin-right:8px"><use href="#i-spark"/></svg>Transparent Pricing</span>
+ <h2>Book Services at Upfront Rates</h2>
+ <p class="sub2">No surprise invoices, hidden markups, or hourly guessing games. Choose a service below to lock in your rate.</p>
+ <div class="pgrid" id="pgrid"></div>
+ <div class="guar">
+  <div class="ic"><svg><use href="#i-shield"/></svg></div>
+  <div><h3>InstaService Upfront Price Promise</h3><p>No surprises. If the technician discovers additional unforeseen parts are needed, you receive written approval before any extra work begins.</p><a class="claim" href="#quote">Claim Your Rate Now ↑</a></div>
+ </div>
+</div></section>
+
+<!-- REVIEWS -->
+<section class="sec c"><div class="wrap">
+ <span class="eb blue"><svg style="vertical-align:-3px;margin-right:8px"><use href="#i-award"/></svg>Verified &amp; Trusted</span>
+ <h2>Real Reviews, Verified Workmanship</h2>
+ <p class="sub2">See how homeowners across the U.S. get their home maintenance taken care of in under 60 seconds.</p>
+ <div class="stats">
+  <div class="st"><div class="ic o"><svg><use href="#i-shield"/></svg></div><b>100%</b><h4>Warranty-Backed</h4><p>Every job guaranteed</p></div>
+  <div class="st"><div class="ic b"><svg><use href="#i-check"/></svg></div><b>&lt; 60s</b><h4>Average Booking</h4><p>Quick frictionless dispatch</p></div>
+  <div class="st"><div class="ic y"><svg><use href="#i-star"/></svg></div><b>4.9 / 5</b><h4>Client Satisfaction</h4><p>Across U.S. service calls</p></div>
+  <div class="st"><div class="ic g"><svg><use href="#i-thumb"/></svg></div><b>$0</b><h4>Hidden Platform Fees</h4><p>What you see is what you pay</p></div>
+ </div>
+ <!-- Replace these sample testimonials with real, verifiable customer reviews before publishing -->
+ <div class="rv">
+  <div class="rc"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>&nbsp;2 days ago</div><q>Booked in literally 45 seconds on my phone after seeing their ad. Tech arrived 2 hours later, fixed the leaking sink trap, and the bill was exactly the $70 starting quote. Zero surprises!</q><div class="who"><div><b>Sarah M.</b><span>Austin, TX</span></div><i>Sink Fix &amp; Drain Clear</i></div></div>
+  <div class="rc"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>&nbsp;1 week ago</div><q>Professional, on time, and our whole two-story home is spotless. Upfront pricing is real—no hidden equipment charges. InstaService is now my go-to.</q><div class="who"><div><b>David L.</b><span>Denver, CO</span></div><i>House Cleaning</i></div></div>
+  <div class="rc"><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>&nbsp;3 days ago</div><q>Woke up to a leaking toilet valve. Filled out the form, got a phone call in 4 minutes, and technician was here by lunch. Clean, polite, and warranty backed.</q><div class="who"><div><b>Marcus K.</b><span>Atlanta, GA</span></div><i>Toilet Leak Repair</i></div></div>
+ </div>
+
+ <div class="proc">
+  <small>SEAMLESS PROCESS</small>
+  <h2>How InstaService Gets It Done Today</h2>
+  <div class="steps">
+   <div class="stp"><div class="no">1</div><h3>Choose Service in 60s</h3><p>Enter your name, phone, and address. See transparent upfront rates starting from $30 before confirming.</p></div>
+   <div class="stp"><div class="no">2</div><h3>Local Pro Dispatched</h3><p>A coordinator texts or calls in under 5 minutes to confirm your technician’s arrival time and details.</p></div>
+   <div class="stp"><div class="no">3</div><h3>Warranty Protected</h3><p>Pay only the upfront rate with zero hidden charges. Backed by our 100% satisfaction and service warranty.</p></div>
+  </div>
+ </div>
+
+ <div class="promo">
+  <span class="chip"><svg><use href="#i-spark"/></svg>Featured Promotion • Available Today</span>
+  <h2>Upfront Pricing with <em>Zero Hidden Charges</em> &amp; 100% Warranty</h2>
+  <p>We believe you shouldn't have to guess what home repairs or cleaning cost. With InstaService, you get transparent upfront pricing starting at just $30, with zero subscription or registration fees.</p>
+  <div class="lock">
+   <small>SAME-DAY AVAILABILITY</small>
+   <h3>Lock In Your Rate</h3>
+   <p>Spots fill quickly for same-day appointments. Lock your rate in under 60 seconds.</p>
+   <a class="btn btn-org" href="#quote">Claim Upfront Quote <svg><use href="#i-arrow"/></svg></a>
+   <div class="ph"><svg><use href="#i-phone"/></svg>Or call (800) 555-0199</div>
+  </div>
+ </div>
+</div></section>
+
+<!-- FINAL CTA -->
+<div class="final"><div class="wrap">
+ <span class="chip"><svg><use href="#i-clock"/></svg>Same-Day Availability Across U.S.</span>
+ <h2>Ready to Get Your Home Service Handled in 60 Seconds?</h2>
+ <p>Choose your service, lock in your upfront rate, and get a same-day technician at your door.</p>
+ <a class="btn" href="#quote">Book Now (60s) <svg><use href="#i-arrow"/></svg></a>
+</div></div>
+</main>
+
+<footer><b>InstaService Inc</b> &copy; <span id="yr"></span>. All rights reserved. Same-day home services across the U.S.</footer>
+
+<div class="bar">
+ <a class="btn btn-call" href="tel:+18005550199"><svg><use href="#i-phone"/></svg><span class="mono">Call</span></a>
+ <a class="btn btn-org" href="#quote"><svg><use href="#i-bolt"/></svg>Book Now (60s) <svg><use href="#i-arrow"/></svg></a>
+</div>
+
+<script>
+const SERVICES=[
+ {cat:"Cleaning",name:"House Cleaning",desc:"Comprehensive top-to-bottom home cleaning with all supplies provided.",price:90,unit:"upfront rate",time:"2 hrs",hot:1},
+ {cat:"Cleaning",name:"Toilet Cleaning",desc:"Deep sanitary scrubbing, disinfection, and deodorization.",price:30,unit:"upfront rate",time:"30 mins"},
+ {cat:"Plumbing",name:"Sink Fix",desc:"Drain unclogging, P-trap seal repairs, and faucet leak restoration.",price:70,unit:"upfront rate",time:"45 mins",hot:1},
+ {cat:"Plumbing",name:"Toilet Leak Repair",desc:"Flapper, fill valve, and base seal leak inspection &amp; repair.",price:40,unit:"upfront rate",time:"30 mins",hot:1},
+ {cat:"Installation",name:"Window Blinds Installation",desc:"Precision measuring and secure bracket mounting for any window size.",price:53,unit:"/ hour",time:"Hourly"},
+ {cat:"Installation",name:"Holiday Lights Installation",desc:"Safe exterior and interior decorative lighting setup and removal.",price:56,unit:"/ hour",time:"Hourly"}
+];
+const chk='<li><svg><use href="#i-tick"/></svg>';
+document.getElementById('pgrid').innerHTML=SERVICES.map((s,i)=>`
+<article class="pc"><div class="in">
+ <div class="t"><span class="cat">${s.cat}</span>${s.hot?'<span class="mr"><svg><use href="#i-spark"/></svg>Most Requested</span>':''}</div>
+ <h3>${s.name}</h3><p class="d">${s.desc}</p>
+ <div class="amt">Starting From<div class="n">$${s.price}<small>${s.unit}</small></div><div class="e"><svg><use href="#i-clock"/></svg>Estimated Service Time: ${s.time}</div></div>
+ <ul>${chk}Certified &amp; background-checked pro</li>${chk}Backed by 100% service warranty</li>${chk}Same-day arrival window available</li></ul>
+</div><div class="ft"><button class="btn btn-dark" data-i="${i}">Select &amp; Book Service <svg><use href="#i-arrow"/></svg></button></div></article>`).join('');
+
+const svc=document.getElementById('svc'),rate=document.getElementById('rate');
+const upd=()=>{rate.textContent='$'+svc.value};
+svc.addEventListener('change',upd);
+document.getElementById('pgrid').addEventListener('click',e=>{
+ const b=e.target.closest('button[data-i]');if(!b)return;
+ svc.selectedIndex=+b.dataset.i;upd();
+ document.getElementById('quote').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('when').addEventListener('click',e=>{
+ const b=e.target.closest('button');if(!b)return;
+ [...b.parentNode.children].forEach(x=>x.classList.toggle('on',x===b));
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* Form handling — static demo. Connect to your backend/CRM (Formspree, Zoho, etc.) by setting ENDPOINT. */
+const ENDPOINT="";
+document.getElementById('qf').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const f=e.target,nm=f.nm.value.trim(),ph=f.ph.value.trim(),em=f.em.value.trim();
+ if(!nm||!ph||!/^\S+@\S+\.\S+$/.test(em)){alert('Please enter your name, phone number, and a valid email.');return}
+ const data={service:svc.selectedOptions[0].dataset.t,rate:svc.value,name:nm,phone:ph,email:em,
+  when:document.querySelector('#when .on').textContent.trim()};
+ if(ENDPOINT){try{await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})}catch(_){}}
+ document.getElementById('ok').style.display='block';f.reset();upd();
+});
+</script>
+</body>
+</html>
